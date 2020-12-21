@@ -1,0 +1,14 @@
+#exclude everything in this folder
+optionalLUTCode/*
+
+createEncoded/results/*
+
+blackBackground/application.windows64/*
+blackBackground/application.windows32/*
+
+vrVisual/application.windows64/*
+vrVisual/application.windows32/*
+
+#want to keep the empty folder but can't keep an empty folder - it needs to have at least one file =>
+#exception to the above rules:
+!createEncoded/results/.gitkeep

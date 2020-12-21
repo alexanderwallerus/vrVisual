@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<graph frameAngle="-5" distortion="false" eye="70" windowed="false" displays="5,6,4,3,2,1" minDistToWall="10" takeOffAfter="-1" >
+  <!-- ALEX outside displays: displays="5,6,4,3,2,1" original center displays: displays="6,5,2,1,4,3"-->
+  <!-- original filename: 01EDSS_CD3b_2CuesOrientation_INS_BDmax100_confl70.xml-->
+  <!-- texture for ground floor -->
+  <floorTexture val="black.png" />
+  <wallHeight val="180"/>
+  <edgeWidth val="500"/>
+  <skySphereTexture val="black.png"/>
+  <!-- the VR starts on this node -->
+  <startNode id="n1"/>
+  <!-- a cross-way/room with id and coordinates -->
+  <node id="n1" x="0"     y="0" 	  texture="black.png" accessible="true"/>
+	 
+    <!-- walls in front - moved by the animal -->
+  <wall x1="-20" y1="210" x2="20" y2="210" texture="shape_dir=reverse_rotated=false_interp=0.00_brightScale=1.40.png" name="1" visible="false"/>
+  <wall x1="-20" y1="210" x2="20" y2="210" texture="shape_dir=reverse_rotated=false_interp=0.20_brightScale=1.20.png" name="2" visible="false"/>
+  <wall x1="-20" y1="210" x2="20" y2="210" texture="shape_dir=reverse_rotated=false_interp=0.40_brightScale=1.00.png" name="3" visible="false"/>
+  <wall x1="-20" y1="210" x2="20" y2="210" texture="shape_dir=reverse_rotated=false_interp=0.00_brightScale=0.80.png" name="4" visible="false"/>
+  <wall x1="-20" y1="210" x2="20" y2="210" texture="shape_dir=reverse_rotated=false_interp=0.20_brightScale=0.60.png" name="5" visible="false"/>
+  <wall x1="-20" y1="210" x2="20" y2="210" texture="shape_dir=reverse_rotated=true_interp=0.40_brightScale=1.40.png" name="6" visible="false"/>
+  <wall x1="-20" y1="210" x2="20" y2="210" texture="shape_dir=reverse_rotated=true_interp=0.00_brightScale=1.20.png" name="7" visible="false"/>
+  <wall x1="-20" y1="210" x2="20" y2="210" texture="shape_dir=reverse_rotated=true_interp=0.20_brightScale=1.00.png" name="8" visible="false"/>
+  <wall x1="-20" y1="210" x2="20" y2="210" texture="shape_dir=reverse_rotated=true_interp=0.40_brightScale=0.80.png" name="9" visible="false"/>
+  <wall x1="-20" y1="210" x2="20" y2="210" texture="shape_dir=reverse_rotated=true_interp=0.00_brightScale=0.60.png" name="10" visible="false"/>
+  <wall x1="-20" y1="210" x2="20" y2="210" texture="shape_dir=reverse_rotated=false_interp=0.60_brightScale=1.90.png" name="11" visible="false"/>
+  <wall x1="-20" y1="210" x2="20" y2="210" texture="shape_dir=reverse_rotated=false_interp=0.80_brightScale=1.60.png" name="12" visible="false"/>
+  <wall x1="-20" y1="210" x2="20" y2="210" texture="shape_dir=reverse_rotated=false_interp=1.00_brightScale=1.00.png" name="13" visible="false"/>
+  <wall x1="-20" y1="210" x2="20" y2="210" texture="shape_dir=reverse_rotated=false_interp=0.60_brightScale=0.40.png" name="14" visible="false"/>
+  <wall x1="-20" y1="210" x2="20" y2="210" texture="shape_dir=reverse_rotated=false_interp=0.80_brightScale=0.10.png" name="15" visible="false"/>
+  <wall x1="-20" y1="210" x2="20" y2="210" texture="shape_dir=reverse_rotated=false_interp=1.00_brightScale=1.90.png" name="16" visible="false"/>
+  <wall x1="-20" y1="210" x2="20" y2="210" texture="shape_dir=reverse_rotated=false_interp=0.60_brightScale=1.60.png" name="17" visible="false"/>
+  <wall x1="-20" y1="210" x2="20" y2="210" texture="shape_dir=reverse_rotated=false_interp=0.80_brightScale=1.00.png" name="18" visible="false"/>
+  <wall x1="-20" y1="210" x2="20" y2="210" texture="shape_dir=reverse_rotated=false_interp=1.00_brightScale=0.40.png" name="19" visible="false"/>
+  
+  <wall x1="-70" y1="190" x2="70" y2="190" texture="black.png" name="20" visible="false"/>
+  
+  
+  <!-- walls on the right - static -->
+  <wall x1="110" y1="210" x2="150" y2="180" texture="shape_dir=reverse_rotated=false_interp=0.00_brightScale=1.40.png" name="21" visible="false"/>
+  <wall x1="110" y1="210" x2="150" y2="180" texture="shape_dir=reverse_rotated=false_interp=0.20_brightScale=1.20.png" name="22" visible="false"/>
+  <wall x1="110" y1="210" x2="150" y2="180" texture="shape_dir=reverse_rotated=false_interp=0.40_brightScale=1.00.png" name="23" visible="false"/>
+  <wall x1="110" y1="210" x2="150" y2="180" texture="shape_dir=reverse_rotated=false_interp=0.00_brightScale=0.80.png" name="24" visible="false"/>
+  <wall x1="110" y1="210" x2="150" y2="180" texture="shape_dir=reverse_rotated=false_interp=0.20_brightScale=0.60.png" name="25" visible="false"/>
+  <wall x1="110" y1="210" x2="150" y2="180" texture="shape_dir=reverse_rotated=true_interp=0.40_brightScale=1.40.png" name="26" visible="false"/>
+  <wall x1="110" y1="210" x2="150" y2="180" texture="shape_dir=reverse_rotated=true_interp=0.00_brightScale=1.20.png" name="27" visible="false"/>
+  <wall x1="110" y1="210" x2="150" y2="180" texture="shape_dir=reverse_rotated=true_interp=0.20_brightScale=1.00.png" name="28" visible="false"/>
+  <wall x1="110" y1="210" x2="150" y2="180" texture="shape_dir=reverse_rotated=true_interp=0.40_brightScale=0.80.png" name="29" visible="false"/>
+  <wall x1="110" y1="210" x2="150" y2="180" texture="shape_dir=reverse_rotated=true_interp=0.00_brightScale=0.60.png" name="30" visible="false"/>
+  <wall x1="110" y1="210" x2="150" y2="180" texture="shape_dir=reverse_rotated=false_interp=0.60_brightScale=1.90.png" name="31" visible="false"/>
+  <wall x1="110" y1="210" x2="150" y2="180" texture="shape_dir=reverse_rotated=false_interp=0.80_brightScale=1.60.png" name="32" visible="false"/>
+  <wall x1="110" y1="210" x2="150" y2="180" texture="shape_dir=reverse_rotated=false_interp=1.00_brightScale=1.00.png" name="33" visible="false"/>
+  <wall x1="110" y1="210" x2="150" y2="180" texture="shape_dir=reverse_rotated=false_interp=0.60_brightScale=0.40.png" name="34" visible="false"/>
+  <wall x1="110" y1="210" x2="150" y2="180" texture="shape_dir=reverse_rotated=false_interp=0.80_brightScale=0.10.png" name="35" visible="false"/>
+  <wall x1="110" y1="210" x2="150" y2="180" texture="shape_dir=reverse_rotated=false_interp=1.00_brightScale=1.90.png" name="36" visible="false"/>
+  <wall x1="110" y1="210" x2="150" y2="180" texture="shape_dir=reverse_rotated=false_interp=0.60_brightScale=1.60.png" name="37" visible="false"/>
+  <wall x1="110" y1="210" x2="150" y2="180" texture="shape_dir=reverse_rotated=false_interp=0.80_brightScale=1.00.png" name="38" visible="false"/>
+  <wall x1="110" y1="210" x2="150" y2="180" texture="shape_dir=reverse_rotated=false_interp=1.00_brightScale=0.40.png" name="39" visible="false"/>
+    
+  <wall x1="80" y1="190" x2="180" y2="90" texture="black.png" name="40" visible="false"/>
+  
+  <!-- walls on the left - static -->
+  <!-- ALEX: these y1 and y2 make the shape nicely straight, only very little angle-->
+  <!-- ALEX: these x seem to give nice width to have pixels to read from even when part of the shape is positioned in between screens-->
+  <wall x1="-150" y1="180" x2="-110" y2="210" texture="shape_dir=reverse_rotated=false_interp=0.00_brightScale=1.40.png" name="41" visible="false"/>
+  <wall x1="-150" y1="180" x2="-110" y2="210" texture="shape_dir=reverse_rotated=false_interp=0.20_brightScale=1.20.png" name="42" visible="false"/>
+  <wall x1="-150" y1="180" x2="-110" y2="210" texture="shape_dir=reverse_rotated=false_interp=0.40_brightScale=1.00.png" name="43" visible="false"/>
+  <wall x1="-150" y1="180" x2="-110" y2="210" texture="shape_dir=reverse_rotated=false_interp=0.00_brightScale=0.80.png" name="44" visible="false"/>
+  <wall x1="-150" y1="180" x2="-110" y2="210" texture="shape_dir=reverse_rotated=false_interp=0.20_brightScale=0.60.png" name="45" visible="false"/>
+  <wall x1="-150" y1="180" x2="-110" y2="210" texture="shape_dir=reverse_rotated=true_interp=0.40_brightScale=1.40.png" name="46" visible="false"/>
+  <wall x1="-150" y1="180" x2="-110" y2="210" texture="shape_dir=reverse_rotated=true_interp=0.00_brightScale=1.20.png" name="47" visible="false"/>
+  <wall x1="-150" y1="180" x2="-110" y2="210" texture="shape_dir=reverse_rotated=true_interp=0.20_brightScale=1.00.png" name="48" visible="false"/>
+  <wall x1="-150" y1="180" x2="-110" y2="210" texture="shape_dir=reverse_rotated=true_interp=0.40_brightScale=0.80.png" name="49" visible="false"/>
+  <wall x1="-150" y1="180" x2="-110" y2="210" texture="shape_dir=reverse_rotated=true_interp=0.00_brightScale=0.60.png" name="50" visible="false"/>
+  <wall x1="-150" y1="180" x2="-110" y2="210" texture="shape_dir=reverse_rotated=false_interp=0.60_brightScale=1.90.png" name="51" visible="false"/>
+  <wall x1="-150" y1="180" x2="-110" y2="210" texture="shape_dir=reverse_rotated=false_interp=0.80_brightScale=1.60.png" name="52" visible="false"/>
+  <wall x1="-150" y1="180" x2="-110" y2="210" texture="shape_dir=reverse_rotated=false_interp=1.00_brightScale=1.00.png" name="53" visible="false"/>
+  <wall x1="-150" y1="180" x2="-110" y2="210" texture="shape_dir=reverse_rotated=false_interp=0.60_brightScale=0.40.png" name="54" visible="false"/>
+  <wall x1="-150" y1="180" x2="-110" y2="210" texture="shape_dir=reverse_rotated=false_interp=0.80_brightScale=0.10.png" name="55" visible="false"/>
+  <wall x1="-150" y1="180" x2="-110" y2="210" texture="shape_dir=reverse_rotated=false_interp=1.00_brightScale=1.90.png" name="56" visible="false"/>
+  <wall x1="-150" y1="180" x2="-110" y2="210" texture="shape_dir=reverse_rotated=false_interp=0.60_brightScale=1.60.png" name="57" visible="false"/>
+  <wall x1="-150" y1="180" x2="-110" y2="210" texture="shape_dir=reverse_rotated=false_interp=0.80_brightScale=1.00.png" name="58" visible="false"/>
+  <wall x1="-150" y1="180" x2="-110" y2="210" texture="shape_dir=reverse_rotated=false_interp=1.00_brightScale=0.40.png" name="59" visible="false"/>
+  
+  <wall x1="-80" y1="190" x2="-180" y2="90" texture="black.png" name="60" visible="false"/>
+  
+</graph>
