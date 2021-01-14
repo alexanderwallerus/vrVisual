@@ -1,4 +1,4 @@
-# replace the VR of a commercial mouse virtual reality setup with a new VR that allows displaying movable high resolution animated shapes
+# A replacement virtual reality visualization for a commercial rodent VR setup. It allows moving high resolution animated shapes.
 
 ## Usage
 * Before first usage:

@@ -40,23 +40,25 @@ boolean left = true;
 float thetaIncrement = 0.05;  //resolution of the shape contour, 0.002 looks good,
                               //0.5 runs faster, 0.05 seems reasonable middle ground.
 
-int customCenterOffset = 160; //offset the shape further from or closer to the center
+int customCenterOffset = 540; //offset the shape further from or closer to the center
 int fps = 120;                //maximum fps, default 120, only ~60 fps achievable here
 int textSpeed = 4;            //default value: 7
-float shapeScale = 1.0;       //default value 1.0. 
-                              //at shapeScale = 0.5 the shape will be half the size
-
+float shapeScale = 1.4;       //default value 1.0. 
+                              //at shapeScale = 0.5 the shape will be half the size,
+                              //at 1.5 it will be 1.5 times as large
 void init(){
   frame.removeNotify();
   frame.setUndecorated(true);
   frame.addNotify();
+  if(shapeScale > 1.0){
+    sketchSize *= shapeScale;
+  }
   super.init();
 }
 
 void setup(){
   size(sketchSize, sketchSize, P2D); 
   println("sketch started");
-  
   //can output debugging info into a txt file like this, when run from batch file
   //saveStrings("test.txt", args);
   
@@ -110,20 +112,22 @@ void draw(){
   //=> good approach for limited setup
   background(0, 0, 0);
 
+  //println("frameRate: " + frameRate);      
+
   //readScreenBorders();
   //mouse = MouseInfo.getPointerInfo().getLocation();
   //println("mouse at: " + mouse);
-
-  //y = 250 instead of screenWH/2 because the right sketch may move over the left 
+  
+  //y = 130 instead of screenWH/2 because the right sketch may move over the left 
   //middle part of readScreens1, but its top still nicely shows the shape to read from
   screen0 = new PImage(robot.createScreenCapture(new Rectangle(
-                       int(readScreens0pos.x), int(readScreens0pos.y + 250), 
+                       int(readScreens0pos.x), int(readScreens0pos.y + 130), 
                        int(screenWH.x), 1)));  
   screen1 = new PImage(robot.createScreenCapture(new Rectangle(
-                       int(readScreens1pos.x), int(readScreens1pos.y + 250), 
+                       int(readScreens1pos.x), int(readScreens1pos.y + 130), 
                        int(screenWH.x), 1)));  
   screen2 = new PImage(robot.createScreenCapture(new Rectangle(
-                       int(readScreens2pos.x), int(readScreens2pos.y + 250), 
+                       int(readScreens2pos.x), int(readScreens2pos.y + 130), 
                        int(screenWH.x), 1)));   
   ////mirrors for debugging what the program sees                 
   //image(screen0, 0, 0, sketchWidth, 1);    
@@ -220,7 +224,6 @@ void draw(){
       //textPos may differ from the originally moved shape's textPos if the other 
       //sketch happens to be in the foreground
     }
-
     s.x = int(visScreensTopLeft.x + 
               pos - ((shapeWidth/2) *sideFactor)         //now at center of shape
               - width/2);       //sketch position is defined by the top left edge
@@ -256,17 +259,32 @@ void draw(){
 
     //set the x translation to the point at which the rectangle should be centered
     translate(width/2, height/2);
+    
+    //use this code block to resize the sketch window whenever it would infringe
+    //into a readScreen to the left or right. 
+    //This would enable arbitrary large shapeScales if needed.
+    //int sketchW = sketchSize;    //default width and location
+    //int sketchL = int(s.x);
+    //if(s.x < visScreensTopLeft.x){
+    //  sketchW = int(sketchSize - (visScreensTopLeft.x - s.x));
+    //  sketchL = int(visScreensTopLeft.x);
+    //  translate(s.x - visScreensTopLeft.x, 0);
+    //} else if(s.x + sketchSize >= readScreens1pos.x){
+    //  sketchW = int(sketchSize - (s.x + sketchSize - readScreens1pos.x));
+    //}
+    //frame.setBounds(new Rectangle(sketchL,  //combines .setLocation() and .setSize()
+    //                int(visScreensTopLeft.y + (screenWH.y/2) - sketchSize/2),
+    //                sketchW, sketchSize));
+                    
+    frame.setLocation(int(s.x),
+                      int(visScreensTopLeft.y + (screenWH.y/2) - sketchSize/2));  
+    
     renderImage(curTexture, s.shapeInterp, 
                 s.rotated, s.textPos,
                 s.bright);
   } else {
     blackOut = true;
   }
-  
-  //println("frameRate: " + frameRate);    
-  
-  frame.setLocation(int(s.x),
-                    int(visScreensTopLeft.y + 316));
 }
 
 void keyPressed(){
@@ -406,7 +424,7 @@ void readScreenBorders() {
 }
 
 //notes on performance/framerate:
-//This code runs at ~62 fps on the commercial VR set up computer.
+//This code runs at ~62 fps on the commercial VR set up computer with shapeScale 1.0.
 //resizing the shapes through its vertices doesn't seem to matter for the framerate.
 //Using a look-up-table calculated during setup() for the vertices of various 
 //interpolations(0.0, 0.1, 0.2,...0.9, 1.0) doesn't seem to make a real difference,
